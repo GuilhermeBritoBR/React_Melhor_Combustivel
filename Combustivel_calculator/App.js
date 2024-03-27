@@ -1,11 +1,11 @@
-import { Text, View } from "react-native";
+import { View } from "react-native";
 import { Styles } from "./src/styles/Stylesheet";
-import TextComponent from "./src/components/partials/TextComponent";
+import Home from "./src/components/pages/Home";
 
 export default function App() {
   return (
     <View style={Styles.container}>
-      <TextComponent />
+      <Home />
     </View>
   );
 }
