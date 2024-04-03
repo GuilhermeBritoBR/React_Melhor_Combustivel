@@ -1,21 +1,16 @@
 import { Image, Text, TextInput, TouchableOpacity, View } from "react-native";
 import { Styles } from "../../styles/Stylesheet";
-import Text2Component from "../pages/Text2Component";
 import React, { useState } from "react";
+import ModalComponent from "./ModalComponent";
 
 export default function Home() {
   const [gasolina, setGasolina] = useState("");
   const [alcool, setAlcool] = useState("");
+  const [visible, setVisible] = useState(false);
   const dividir = parseFloat(alcool) / parseFloat(gasolina);
   const mensagem = dividir < 0.7 ? "Àlcool" : "Gasolina";
 
-  visModal = (vis) => {
-    if (!visible) {
-      setVisible(vis);
-    } else {
-      setVisible(vis);
-    }
-  };
+  console.log(typeof setAlcool);
 
   return (
     <View style={Styles.container}>
@@ -38,11 +33,20 @@ export default function Home() {
         style={Styles.TextInput}
         placeholder="Digite aqui"
       />
-      <TouchableOpacity style={Styles.Touchable} onPress={() => visModal(true)}>
+      <TouchableOpacity
+        style={Styles.Touchable}
+        onPress={() => setVisible(true)}
+      >
         <Text style={Styles.textButton}>Calcular</Text>
       </TouchableOpacity>
 
-      <Text2Component txt={mensagem} etanol={alcool} gas={gasolina} />
+      <ModalComponent
+        txt={mensagem}
+        etanol={alcool}
+        gas={gasolina}
+        setVisible={setVisible}
+        vis={visible}
+      />
     </View>
   );
 }
