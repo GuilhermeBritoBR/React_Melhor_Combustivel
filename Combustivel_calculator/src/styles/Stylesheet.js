@@ -8,7 +8,7 @@ export const Styles = StyleSheet.create({
     justifyContent: "center",
     backgroundColor: "black",
   },
-  Text2: {
+  Modal: {
     flex: 1,
     backgroundColor: "#fff",
     alignItems: "center",

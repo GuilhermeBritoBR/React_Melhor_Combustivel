@@ -4,7 +4,6 @@ import Text2Component from "../pages/Text2Component";
 import React, { useState } from "react";
 
 export default function Home() {
-  // const [recomendado] = useState("");
   const [gasolina, setGasolina] = useState("");
   const [alcool, setAlcool] = useState("");
   const dividir = parseFloat(alcool) / parseFloat(gasolina);

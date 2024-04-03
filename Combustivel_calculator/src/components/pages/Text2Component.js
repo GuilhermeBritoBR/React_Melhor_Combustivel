@@ -15,7 +15,7 @@ export default function Text2Component({ txt, etanol, gas }) {
 
   return (
     <Modal transparent={visible} animationType="fade" visible={visible}>
-      <View style={Styles.Text2}>
+      <View style={Styles.Modal}>
         <Image
           style={Styles.imgLogo}
           source={require("../../assets/images/gas.png")}
